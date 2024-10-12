@@ -90,29 +90,30 @@
      - Integrate Apache Airflow’s logging capabilities and Kafka monitoring tools (e.g., **Kafka Manager**) to maintain a comprehensive log of all events, transformations, and processing activities.
 
 ## Implementation Steps
-Set up Apache Kafka:
 
-Install Kafka and start the Kafka broker.
-Create necessary topics for data streams.
-Configure Apache NiFi:
+### Set up Apache Kafka:
+- **Install Kafka** and start the Kafka broker.
+- Create necessary topics for data streams.
 
-Install NiFi and configure processors to connect to SQL and NoSQL databases.
-Design the flow to ingest data into Kafka topics.
-Deploy Apache Spark:
+### Configure Apache NiFi:
+- **Install NiFi** and configure processors to connect to SQL and NoSQL databases.
+- Design the flow to ingest data into Kafka topics.
 
-Install Spark and configure it to read from Kafka topics.
-Write Spark Streaming jobs to process incoming data.
-Implement Apache Airflow:
+### Deploy Apache Spark:
+- **Install Spark** and configure it to read from Kafka topics.
+- Write Spark Streaming jobs to process incoming data.
 
-Install Airflow and set up a scheduler.
-Create DAGs for orchestrating data processing tasks.
-Testing and Validation:
+### Implement Apache Airflow:
+- **Install Airflow** and set up a scheduler.
+- Create DAGs for orchestrating data processing tasks.
 
-Test the entire pipeline by simulating data flow from ingestion to processing.
-Validate the output against expected results.
+### Testing and Validation:
+- Test the entire pipeline by simulating data flow from ingestion to processing.
+- Validate the output against expected results.
 
 ## Research Insights
-Scalability: Each component can scale independently to accommodate increased data loads. Kafka’s distributed nature allows for adding more brokers as needed.
-Data Consistency: Implementing exactly-once semantics in Kafka ensures data consistency across processing stages.
-Performance Optimization: Utilizing Spark's in-memory processing capabilities can significantly reduce the latency in data processing.
-Error Handling: Building robust error-handling mechanisms in NiFi and Airflow ensures resilience in the data pipeline.
+
+- **Scalability**: Each component can scale independently to accommodate increased data loads. Kafka’s distributed nature allows for adding more brokers as needed.
+- **Data Consistency**: Implementing exactly-once semantics in Kafka ensures data consistency across processing stages.
+- **Performance Optimization**: Utilizing Spark's in-memory processing capabilities can significantly reduce the latency in data processing.
+- **Error Handling**: Building robust error-handling mechanisms in NiFi and Airflow ensures resilience in the data pipeline.
